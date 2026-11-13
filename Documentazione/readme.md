@@ -64,7 +64,13 @@ The last one is `benign` and specifies that the labelled flow does not belong to
 -   URG Flag Count: the number of packets in the flow with the URG flag set
 -   CWE Flag Count: the number of packets in the flow with the CWE flag set
 -   ECE Flag Count: the number of packets in the flow with the ECE flag set
--   Down/Up Ratio: the ratio of the number of packets sent from the source to the destination to the number of packets sent from the destination to the source
+-   Down/Up Ratio: the ratio of the number of packets sent from the source to the destination to the number of packets sent from the destination to the source     
+    > **⚠️ Correction:** the description above is inverted. The feature is actually
+    > `floor(Total Backward Packets / Total Fwd Packets)`, i.e. packets from destination → source
+    > divided by packets from source → destination, truncated to an integer.
+    > Verified on all 64,239 rows: this formula matches the column in 100% of cases
+    > (e.g. Fwd = 10, Bwd = 0 → ratio = 0; Fwd = 1, Bwd = 3 → ratio = 3).
+    > This is also how CICFlowMeter defines it ("download" = backward, "upload" = forward).
 -   Average Packet Size: the average size, in bytes, of the packets in the flow
 -   Avg Fwd Segment Size: the average size, in bytes, of the forward segments (i.e., packets sent from the source to the destination) in the flow
 -   Avg Bwd Segment Size: the average size, in bytes, of the backward segments (i.e., packets sent from the destination to the source) in the flow
