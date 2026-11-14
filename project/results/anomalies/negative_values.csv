@@ -1,0 +1,7 @@
+,negative values,% of flows,min,distinct negative values
+Fwd Header Length,23581,36.71,-212543795000,349
+Bwd Header Length,1,0.0,-2125437950,1
+Fwd Header Length.1,23581,36.71,-212543795000,349
+Init_Win_bytes_forward,48928,76.17,-1,1
+Init_Win_bytes_backward,58018,90.32,-1,1
+min_seg_size_forward,23587,36.72,-1062718975,2

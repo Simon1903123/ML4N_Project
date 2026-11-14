@@ -1,0 +1,11 @@
+role,ip,flows,%,main classes
+Source IP,172.16.0.5,57994,90.28,"ddos_udp_lag, ddos_snmp, ddos_ssdp"
+Source IP,192.168.50.7,2342,3.65,benign
+Source IP,192.168.50.6,1279,1.99,benign
+Source IP,192.168.50.8,892,1.39,benign
+Source IP,192.168.50.1,626,0.97,"ddos_ntp, ddos_dns, benign"
+Destination IP,192.168.50.1,58000,90.29,"ddos_udp_lag, ddos_snmp, ddos_ssdp"
+Destination IP,4.2.2.4,1713,2.67,benign
+Destination IP,172.16.0.5,587,0.91,"ddos_ntp, ddos_dns, ddos_ldap"
+Destination IP,192.168.50.7,547,0.85,benign
+Destination IP,8.8.8.8,419,0.65,benign

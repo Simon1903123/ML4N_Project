@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Per-class summary (medians for duration, packets and packet length).}
+\label{tab:per_class_summary}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Class & Flows & Src IPs & Dst IPs & UDP \% & Duration (µs) & Fwd pkts & Bwd pkts & Pkt len (B) \\
+\midrule
+benign & 5658 & 215 & 244 & 38 & 20822 & 2 & 2 & 44 \\
+ddos\_dns & 5369 & 2 & 2 & 97 & 28301 & 200 & 0 & 440 \\
+ddos\_ldap & 5928 & 2 & 2 & 100 & 1 & 2 & 0 & 1472 \\
+ddos\_mssql & 5911 & 2 & 2 & 100 & 1 & 2 & 0 & 1472 \\
+ddos\_netbios & 5830 & 2 & 2 & 100 & 1 & 2 & 0 & 483 \\
+ddos\_ntp & 986 & 2 & 2 & 1 & 210 & 1 & 2 & 0 \\
+ddos\_snmp & 5984 & 2 & 2 & 100 & 1 & 2 & 0 & 229 \\
+ddos\_ssdp & 5970 & 2 & 2 & 100 & 2 & 2 & 0 & 1472 \\
+ddos\_syn & 5480 & 1 & 1 & 0 & 51 & 2 & 0 & 0 \\
+ddos\_tftp & 5261 & 2 & 2 & 0 & 1 & 2 & 0 & 0 \\
+ddos\_udp & 5876 & 2 & 2 & 100 & 104730 & 4 & 0 & 362 \\
+ddos\_udp\_lag & 5986 & 2 & 2 & 100 & 49 & 2 & 0 & 372 \\
+\bottomrule
+\end{tabular}
+\end{table}

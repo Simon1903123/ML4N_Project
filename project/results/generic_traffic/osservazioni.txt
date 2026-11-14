@@ -1,0 +1,87 @@
+=== 1. RIEPILOGO ===
+                         Quantity                                                               Value
+                      Total flows                                                              64,239
+                          Classes                                          12 (1 benign + 11 attacks)
+                     Attack types DNS, LDAP, MSSQL, NETBIOS, NTP, SNMP, SSDP, SYN, TFTP, UDP, UDP-LAG
+                        Time span                                01/12/2018, 09:17-13:34 (4 h 17 min)
+Distinct source / destination IPs                                                           216 / 245
+              Transport protocols                                    UDP 76.1%, TCP 23.8%, other 0.1%
+
+=== 2. FLUSSI PER CLASSE ===
+              Flows     %
+label                    
+ddos_udp_lag   5986  9.32
+ddos_snmp      5984  9.32
+ddos_ssdp      5970  9.29
+ddos_ldap      5928  9.23
+ddos_mssql     5911  9.20
+ddos_udp       5876  9.15
+ddos_netbios   5830  9.08
+benign         5658  8.81
+ddos_syn       5480  8.53
+ddos_dns       5369  8.36
+ddos_tftp      5261  8.19
+ddos_ntp        986  1.53
+Classe più grande / più piccola: ddos_udp_lag (5,986) / ddos_ntp (986), rapporto 6.1
+
+=== 3. IP ===
+          role           ip  flows     %                       main classes
+     Source IP   172.16.0.5  57994 90.28 ddos_udp_lag, ddos_snmp, ddos_ssdp
+     Source IP 192.168.50.7   2342  3.65                             benign
+     Source IP 192.168.50.6   1279  1.99                             benign
+     Source IP 192.168.50.8    892  1.39                             benign
+     Source IP 192.168.50.1    626  0.97         ddos_ntp, ddos_dns, benign
+Destination IP 192.168.50.1  58000 90.29 ddos_udp_lag, ddos_snmp, ddos_ssdp
+Destination IP      4.2.2.4   1713  2.67                             benign
+Destination IP   172.16.0.5    587  0.91      ddos_ntp, ddos_dns, ddos_ldap
+Destination IP 192.168.50.7    547  0.85                             benign
+Destination IP      8.8.8.8    419  0.65                             benign
+Source IP distinti per classe: benign 215, attacchi da 1 a 2
+Destination IP distinti per classe: benign 244, attacchi da 1 a 2
+
+=== 4. PROTOCOLLI ===
+Globale: UDP 76.1%, TCP 23.8%, other 0.1%
+transport       TCP    UDP  other
+label                            
+benign         61.0   38.2    0.7
+ddos_dns        2.6   97.3    0.1
+ddos_ldap       0.0   99.9    0.0
+ddos_mssql      0.0  100.0    0.0
+ddos_netbios    0.0  100.0    0.0
+ddos_ntp       98.7    0.6    0.7
+ddos_snmp       0.0  100.0    0.0
+ddos_ssdp       0.1   99.9    0.0
+ddos_syn      100.0    0.0    0.0
+ddos_tftp      99.9    0.1    0.0
+ddos_udp        0.0  100.0    0.0
+ddos_udp_lag    0.0  100.0    0.0
+
+=== 5. FINESTRE TEMPORALI ===
+                   min       max         duration
+label                                            
+ddos_ntp      09:17:11  09:39:32  00:22:21.714565
+benign        09:17:12  13:30:30  04:13:18.107533
+ddos_dns      10:51:39  10:55:44  00:04:04.863597
+ddos_ldap     11:22:40  11:22:41  00:00:01.689571
+ddos_mssql    11:32:32  11:32:34  00:00:01.770705
+ddos_netbios  11:47:08  11:47:09  00:00:00.843774
+ddos_snmp     12:00:13  12:00:14  00:00:00.803852
+ddos_ssdp     12:23:13  12:23:14  00:00:00.718002
+ddos_udp      12:36:57  12:36:58  00:00:00.792066
+ddos_udp_lag  13:04:45  13:04:46  00:00:00.700627
+ddos_syn      13:30:30  13:30:31  00:00:00.605614
+ddos_tftp     13:34:27  13:34:27  00:00:00.581638
+
+=== 6. SERVIZI NEL TRAFFICO BENIGN ===
+transport   TCP   UDP  other
+Service                     
+HTTPS      2312     0      0
+DNS           0  2132      0
+HTTP       1098     0      0
+other         0    18     40
+SMTPS        32     0      0
+DHCP          0     8      0
+FTP           7     0      0
+SSH           5     0      0
+NTP           0     3      0
+NetBIOS       0     3      0
