@@ -1,4 +1,0 @@
-column,"best |r|, all rows (§5)",valid rows,"best |r|, valid rows only"
-Fwd Header Length,0.484  (min_seg_size_forward),"40,658",0.383  (act_data_pkt_fwd)
-min_seg_size_forward,0.484  (Fwd Header Length),"40,652",0.236  (Average Packet Size)
-Bwd Header Length,0.013  (Inbound),"64,238",0.993  (Total Backward Packets)
